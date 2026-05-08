@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 263 90% 65%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --font-bebas: var(--font-bebas);
+  --font-fredoka: var(--font-fredoka);
+  --font-signature: var(--font-signature);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-500/30;
+  }
+
+  .nav-link {
+    @apply text-slate-600 hover:text-indigo-600 font-medium transition-colors;
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent),
+              radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.1), transparent);
+}
+
+.font-bebas { font-family: var(--font-bebas); }
+.font-riffic { font-family: var(--font-fredoka); }
+.font-signature { font-family: var(--font-signature); }
